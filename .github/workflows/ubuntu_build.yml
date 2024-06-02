@@ -20,12 +20,12 @@ jobs:
     - name: Build app
       run: |
        cd src/server
-       cmake -DDEBUG=1 -DBUILD_WITH_TESTS=ON .
+       cmake -DCMAKE_CXX_FLAGS="-DDEBUG" -DBUILD_WITH_TESTS=ON .
        make
 
     - name: Run tests
       run: |
-       cd tests
+       cd src/server/tests
        make
        chmod a+x ./unit_tests
        ./unit_tests
