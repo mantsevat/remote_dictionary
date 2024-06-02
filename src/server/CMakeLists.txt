@@ -49,8 +49,5 @@ target_link_libraries(
 option(BUILD_WITH_TESTS "Build with tests" OFF)
 
 if(BUILD_WITH_TESTS)
-    file(GLOB test_src "${PROJECT_SOURCE_DIR}/dictionary/*.h"
-        "${PROJECT_SOURCE_DIR}/dictionary/*.cpp")  
     add_subdirectory(tests)
-    add_library(test_lib ${test_src})
 endif()
