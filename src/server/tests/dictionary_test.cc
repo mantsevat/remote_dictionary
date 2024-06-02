@@ -10,11 +10,16 @@ class DictionaryTest : public testing::Test
 {
 
 protected:
-
     void SetUp() override
     {
+        auto logger = std::make_shared<spdlog::logger>("logger");
+        spdlog::register_logger(logger);
         dict = std::unique_ptr<dictionary>(new dictionary(std::shared_ptr<saver>(new saver())));
         dict->process_command("PUT test1key test1value");
+    }
+
+    void TearDown() override{
+        spdlog::drop("logger");
     }
 
     std::unique_ptr<dictionary> dict;
