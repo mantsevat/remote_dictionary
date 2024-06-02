@@ -20,7 +20,7 @@ jobs:
     - name: Build app
       run: |
        cd src/server
-       cmake -DDEBUG -DBUILD_WITH_TESTS=ON .
+       cmake -DDEBUG=1 -DBUILD_WITH_TESTS=ON .
        make
 
     - name: Run tests
