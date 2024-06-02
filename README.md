@@ -53,11 +53,11 @@ make
 Варианты сборки: 
 * Уровень логирования debug:
 ```
-cmake . -DDEBUG
+cmake -DCMAKE_C_FLAGS="-DDEBUG" .
 ```
 * Тесты (и их запуск):
 ```
- cmake . -DBUILD_WITH_TESTS=ON.
+ cmake -DBUILD_WITH_TESTS=ON .
  cd tests
  make
  ./unit_tests
