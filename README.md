@@ -53,7 +53,7 @@ make
 Варианты сборки: 
 * Уровень логирования debug:
 ```
-cmake -DCMAKE_C_FLAGS="-DDEBUG" .
+cmake -DCMAKE_CXX_FLAGS="-DDEBUG" .
 ```
 * Тесты (и их запуск):
 ```
