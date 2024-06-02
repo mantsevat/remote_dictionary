@@ -44,7 +44,7 @@ target_link_libraries(
     server
     Boost::program_options
     Boost::asio
-    spdlog)
+    spdlog::spdlog)
 
 option(BUILD_WITH_TESTS "Build with tests" OFF)
 
